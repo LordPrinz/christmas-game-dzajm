@@ -1,0 +1,20 @@
+// schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model TeamModel {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  name         String
+  votes        Int
+  projectName  String
+  projectLink  String
+  members      String[]
+  contactEmail String
+}
