@@ -26,6 +26,7 @@ const config: Config = {
 					bg: {
 						blue: "#91eefa",
 					},
+					snow: "#fffafa",
 				},
 			},
 		},

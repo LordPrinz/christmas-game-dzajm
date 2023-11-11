@@ -10,6 +10,6 @@
 		@apply h-full;
 	}
 	body {
-		@apply bg-theme-bg-blue text-gray-900 h-full;
+		@apply bg-theme-snow text-gray-900 h-full;
 	}
 }
