@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@azure/msal-browser": "^3.5.0",
+    "@azure/msal-common": "^14.4.0",
+    "@azure/msal-react": "^2.0.7",
     "@prisma/client": "^5.5.2",
     "clsx": "^2.0.0",
     "next": "14.0.1",
