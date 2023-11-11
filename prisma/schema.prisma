@@ -9,12 +9,17 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Vote {
+  id         String @id @default(auto()) @map("_id") @db.ObjectId
+  value      Int
+  userId     String
+  projectId  String
+}
+
 model ProjectModel {
   id           String   @id @default(auto()) @map("_id") @db.ObjectId
   teamName     String
   projectName  String
-  upVoters     String[]
-  downVoters   String[]
   projectLink  String
   members      String[]
   contactEmail String
