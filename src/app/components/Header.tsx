@@ -4,7 +4,7 @@ import Ground from "./Ground";
 
 const Header = () => {
 	return (
-		<div className="w-full  col-[full-start/full-end]  flex flex-col bg-theme-bg-blue overflow-hidden">
+		<div className="w-full  col-[full-start/full-end]  flex flex-col bg-theme-twilight-blue-500 overflow-hidden">
 			<div className="flex flex-col items-center justify-center flex-1">
 				<div className="flex flex-col items-center justify-center">
 					<h1 className="text-6xl font-bold text-center text-theme-snow ">
