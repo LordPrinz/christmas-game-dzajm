@@ -16,7 +16,7 @@ const Header = () => {
 					</h2>
 				</div>
 			</div>
-			<Lights />
+			{/* <Lights /> */}
 			<Snowfall />
 			<Ground />
 		</div>

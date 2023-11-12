@@ -8,7 +8,7 @@ type Props = {
 const Lights = ({ className }: Props) => {
 	return (
 		<svg
-			className={cn("h-full m-0 absolute w-full z-50", className)}
+			className={cn("h-full m-0 absolute w-full z-0", className)}
 			viewBox="0 0 612 792">
 			<path
 				className="light_cord"
