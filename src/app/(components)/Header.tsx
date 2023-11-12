@@ -1,6 +1,7 @@
 import React from "react";
 import Snowfall from "./Snowfall";
 import Ground from "./Ground";
+import Lights from "./lights/Lights";
 
 const Header = () => {
 	return (
@@ -15,6 +16,7 @@ const Header = () => {
 					</h2>
 				</div>
 			</div>
+			<Lights />
 			<Snowfall />
 			<Ground />
 		</div>
