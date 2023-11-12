@@ -1,14 +1,6 @@
 import NextAuth from "next-auth/next";
-import AzureADProvider from "next-auth/providers/azure-ad";
+import { options } from "./options";
 
-const handler = NextAuth({
-	providers: [
-		AzureADProvider({
-			clientId: process.env.AZURE_AD_CLIENT_ID,
-			clientSecret: process.env.AZURE_AD_CLIENT_SECRET_VALUE,
-			tenantId: process.env.AZURE_AD_TENANT_ID,
-		}),
-	],
-});
+const handler = NextAuth(options);
 
 export { handler as GET, handler as POST };
