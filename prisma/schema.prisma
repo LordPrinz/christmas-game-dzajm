@@ -9,18 +9,13 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Vote {
-  id         String @id @default(auto()) @map("_id") @db.ObjectId
-  value      Int
-  userId     String
-  projectId  String
-}
 
 model ProjectModel {
   id           String   @id @default(auto()) @map("_id") @db.ObjectId
   teamName     String
-  projectName  String
-  projectLink  String
+  name  String
+  link  String
+  stars String[] // It will keep emails of users that starred this project
   members      String[]
   contactEmail String
 }

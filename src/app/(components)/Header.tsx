@@ -1,7 +1,7 @@
 import React from "react";
 import Snowfall from "./Snowfall";
 import Ground from "./Ground";
-import Lights from "./lights/Lights";
+// import Lights from "./lights/Lights";
 
 const Header = () => {
 	return (
