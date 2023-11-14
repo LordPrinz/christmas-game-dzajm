@@ -9,13 +9,12 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 model ProjectModel {
   id           String   @id @default(auto()) @map("_id") @db.ObjectId
   teamName     String
-  name  String
-  link  String
-  stars String[] // It will keep emails of users that starred this project
+  name         String
+  link         String
+  stars        String[] //* It will keep emails of users that starred this project
   members      String[]
   contactEmail String
 }
