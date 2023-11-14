@@ -36,7 +36,7 @@ const Project = async ({ project }: Props) => {
 						</svg>
 					</>
 				}>
-				<StarProject isStarred={isStarred} />
+				<StarProject isStarred={isStarred} projectId={project.id} />
 			</Suspense>
 		</Link>
 	);

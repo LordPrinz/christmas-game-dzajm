@@ -5,9 +5,9 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-export async function addStar() {
-	console.log("Give a star");
+export async function addStar(projectId: string) {
+	console.log("Give a star", projectId);
 }
-export async function removeStar() {
-	console.log("remove a star");
+export async function removeStar(projectId: string) {
+	console.log("remove a star", projectId);
 }

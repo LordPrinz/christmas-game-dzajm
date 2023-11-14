@@ -5,10 +5,11 @@ import { startTransition, useEffect, useState } from "react";
 import { addStar, removeStar } from "./_actions/starAction";
 type Props = {
 	isStarred: boolean;
+	projectId: string;
 };
 
 // eslint-disable-next-line @next/next/no-async-client-component
-const StarProject = ({ isStarred }: Props) => {
+const StarProject = ({ isStarred, projectId }: Props) => {
 	const [isActive, setIsActive] = useState(isStarred);
 	const [isFirstRender, setIsFirstRender] = useState(true);
 
@@ -22,8 +23,8 @@ const StarProject = ({ isStarred }: Props) => {
 		if (isFirstRender) return setIsFirstRender(false);
 		const timeout = setTimeout(() => {
 			startTransition(() => {
-				if (!isActive) addStar();
-				else removeStar();
+				if (!isActive) addStar(projectId);
+				else removeStar(projectId);
 			});
 		}, 700);
 
@@ -35,10 +36,10 @@ const StarProject = ({ isStarred }: Props) => {
 		<svg
 			onClick={starClickHandler}
 			className={cn(
-				"fill-transparent w-10 h-10 absolute top-1/2 -translate-y-1/2 right-4 stroke-theme-twilight-blue-500",
+				"fill-transparent w-10 h-10 absolute top-1/2 -translate-y-1/2 right-4 stroke-theme-twilight-blue-500  transition hover:transition",
 				isActive
-					? ""
-					: "fill-theme-twilight-blue-500 stroke-theme-twilight-blue-600"
+					? "hover:fill-theme-twilight-blue-200"
+					: "fill-theme-twilight-blue-500 stroke-theme-twilight-blue-600  hover:fill-theme-twilight-blue-400 "
 			)}
 			strokeWidth={14}
 			viewBox="0 0 448 512"
