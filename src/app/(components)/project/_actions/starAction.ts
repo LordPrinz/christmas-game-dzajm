@@ -1,6 +1,7 @@
 "use server";
 
 import { PrismaClient } from "@prisma/client";
+//TODO: Deal with too man prismaClient calls
 
 const prisma = new PrismaClient();
 
