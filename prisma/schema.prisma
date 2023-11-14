@@ -14,7 +14,7 @@ model ProjectModel {
   teamName     String
   name         String
   link         String
-  stars        String[] //* It will keep emails of users that starred this project
+  staredBy        String[] //* It will keep emails of users that starred this project
   members      String[]
   contactEmail String
 }
