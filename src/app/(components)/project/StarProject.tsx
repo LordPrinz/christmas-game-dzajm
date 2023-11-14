@@ -1,8 +1,8 @@
 "use client";
 
 import { cn } from "@/utils/tailwind";
-import { useState } from "react";
-
+import { startTransition, useEffect, useState } from "react";
+import { addStar, removeStar } from "./_actions/starAction";
 type Props = {
 	isStarred: boolean;
 };
@@ -10,12 +10,26 @@ type Props = {
 // eslint-disable-next-line @next/next/no-async-client-component
 const StarProject = ({ isStarred }: Props) => {
 	const [isActive, setIsActive] = useState(isStarred);
+	const [isFirstRender, setIsFirstRender] = useState(true);
 
 	const starClickHandler = (event: React.MouseEvent<SVGElement, MouseEvent>) => {
 		event.stopPropagation();
 		event.preventDefault();
 		setIsActive(!isActive);
 	};
+
+	useEffect(() => {
+		if (isFirstRender) return setIsFirstRender(false);
+		const timeout = setTimeout(() => {
+			startTransition(() => {
+				if (!isActive) addStar();
+				else removeStar();
+			});
+		}, 700);
+
+		return () => clearTimeout(timeout);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [isActive]);
 
 	return (
 		<svg
