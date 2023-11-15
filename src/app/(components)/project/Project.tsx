@@ -1,9 +1,10 @@
 import Link from "next/link";
 import StarProject from "./StarProject";
-import { ProjectModel } from "@/models/ProjectModel";
+
 import { getServerSession } from "next-auth";
 import { options } from "@/app/api/auth/[...nextauth]/options";
 import { Suspense } from "react";
+import { ProjectModel } from "@prisma/client";
 
 type Props = {
 	project: ProjectModel;
@@ -14,7 +15,11 @@ const Project = async ({ project }: Props) => {
 
 	const userEmail = session?.user?.email as string;
 
+	console.log(userEmail, project.staredBy);
+
 	const isStarred = project.staredBy.includes(userEmail);
+
+	console.log(isStarred);
 
 	return (
 		<Link
@@ -36,7 +41,7 @@ const Project = async ({ project }: Props) => {
 						</svg>
 					</>
 				}>
-				<StarProject isStarred={isStarred} projectId={project.id} />
+				<StarProject isStarred={isStarred} project={project} />
 			</Suspense>
 		</Link>
 	);
