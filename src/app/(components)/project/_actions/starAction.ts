@@ -1,11 +1,9 @@
 "use server";
 
 import { options } from "@/app/api/auth/[...nextauth]/options";
-import { PrismaClient, ProjectModel } from "@prisma/client";
+import prisma from "@/lib/db";
+import { ProjectModel } from "@prisma/client";
 import { getServerSession } from "next-auth";
-//TODO: Deal with too man prismaClient calls
-
-const prisma = new PrismaClient();
 
 export async function addStar(project: ProjectModel) {
 	const session = await getServerSession(options);
