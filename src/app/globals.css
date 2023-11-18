@@ -27,10 +27,6 @@
 }
 
 @layer utilities {
-	.header-animation {
-		@apply;
-	}
-
 	.no-scrollbar ::-webkit-scrollbar {
 		@apply h-2 w-2;
 	}
