@@ -22,10 +22,10 @@ const StarProject = ({ isStarred, project }: Props) => {
 
 	useEffect(() => {
 		if (isFirstRender) return setIsFirstRender(false);
-		console.log(isActive);
+
 		const timeout = setTimeout(() => {
 			startTransition(() => {
-				if (!isActive) addStar(project);
+				if (isActive) addStar(project);
 				else removeStar(project);
 			});
 		}, 700);

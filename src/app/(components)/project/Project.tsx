@@ -15,11 +15,7 @@ const Project = async ({ project }: Props) => {
 
 	const userEmail = session?.user?.email as string;
 
-	console.log(userEmail, project.staredBy);
-
 	const isStarred = project.staredBy.includes(userEmail);
-
-	console.log(isStarred);
 
 	return (
 		<Link
