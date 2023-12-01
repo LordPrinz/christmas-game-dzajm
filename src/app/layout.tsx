@@ -9,6 +9,18 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
 	title: "Christmas Game Dzajm 2023",
 	description: "Christmas Game Dzajm 2023",
+	twitter: {
+		card: "summary_large_image",
+	},
+	openGraph: {
+		title: "Christmas Game Dzajm 2023",
+		description: "Christmas Game Dzajm 2023",
+
+		type: "website",
+		locale: "pl_PL",
+		url: "https://christmas.dzaj.de",
+		siteName: "Christmas Game Dzajm 2023",
+	},
 };
 
 export default function RootLayout({
