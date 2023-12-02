@@ -7,14 +7,14 @@
 		@apply box-border p-0 m-0;
 	}
 	html {
-		@apply h-full;
+		@apply h-full bg-[#111827];
 	}
 	body {
-		@apply bg-theme-snow text-theme-twilight-blue-950 h-full text-sm sm:text-base;
+		@apply text-theme-twilight-blue-950 h-full text-sm sm:text-base;
 	}
 
 	::-webkit-scrollbar {
-		@apply h-2 w-2;
+		@apply h-2 w-2 bg-theme-snow;
 	}
 
 	::-webkit-scrollbar-thumb {
