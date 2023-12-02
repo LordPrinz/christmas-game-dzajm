@@ -8,4 +8,7 @@ export const options = {
 			tenantId: process.env.AZURE_AD_TENANT_ID,
 		}),
 	],
+	pages: {
+		signIn: "/auth/signIn",
+	},
 };
