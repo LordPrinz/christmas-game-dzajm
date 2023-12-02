@@ -12,11 +12,11 @@ export default async function Home() {
 				<Header />
 
 				<section className="grid grid-cols-defaultLayout z-10 bg-theme-snow col-[full-start/full-end] py-20">
-					<header className="col-[center-start/center-end] text-3xl font-semibold text-center">
+					<header className="col-[center-start/center-end] text-2xl sm:text-3xl font-semibold text-center">
 						<h3>Wasze Prace</h3>
 					</header>
 
-					<div className="col-[center-start/center-end] mt-20 grid grid-cols-[repeat(auto-fit,minmax(17rem,1fr))] gap-5 ">
+					<div className="col-[center-start/center-end] mt-10 sm:mt-20 grid grid-cols-[repeat(auto-fit,minmax(17rem,1fr))] gap-3.5 sm:gap-5 ">
 						<Suspense fallback={<SkeletonLoading />}>
 							<Projects />
 						</Suspense>

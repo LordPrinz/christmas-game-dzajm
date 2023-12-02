@@ -38,7 +38,7 @@ const StarProject = ({ isStarred, project }: Props) => {
 		<svg
 			onClick={starClickHandler}
 			className={cn(
-				"fill-transparent w-10 h-10 absolute top-1/2 -translate-y-1/2 right-4 stroke-theme-twilight-blue-500  transition hover:transition",
+				"fill-transparent w-8 sm:w-10 h-8 sm:h-10 absolute top-1/2 -translate-y-1/2 right-4 stroke-theme-twilight-blue-500  transition hover:transition",
 				isActive
 					? "fill-theme-twilight-blue-500 stroke-theme-twilight-blue-600  hover:fill-theme-twilight-blue-400"
 					: "hover:fill-theme-twilight-blue-200"

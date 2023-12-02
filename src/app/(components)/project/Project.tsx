@@ -22,14 +22,14 @@ const Project = async ({ project }: Props) => {
 			href={project.link}
 			className="border rounded-lg p-4 hover:-translate-y-1 hover:transition transition relative">
 			<div className="flex gap-0.5 flex-col">
-				<span className="text-sm">{project.teamName}</span>
-				<span className="text-lg font-semibold">{project.name}</span>
+				<span className="text-xs sm:text-sm">{project.teamName}</span>
+				<span className="text-base sm:text-lg font-semibold">{project.name}</span>
 			</div>
 			<Suspense
 				fallback={
 					<>
 						<svg
-							className="fill-transparent w-8 h-8 absolute top-1/2 -translate-y-1/2 right-4 stroke-theme-twilight-blue-500"
+							className="fill-transparent w-6 sm:w-8 h-6 sm:h-8 absolute top-1/2 -translate-y-1/2 right-4 stroke-theme-twilight-blue-500"
 							strokeWidth="14"
 							viewBox="0 0 448 512"
 							xmlns="http://www.w3.org/2000/svg">
