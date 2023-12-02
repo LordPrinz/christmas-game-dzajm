@@ -16,7 +16,7 @@ export default async function Home() {
 						<h3>Wasze Prace</h3>
 					</header>
 
-					<div className="col-[center-start/center-end] mt-10 sm:mt-20 grid grid-cols-[repeat(auto-fit,minmax(17rem,1fr))] gap-3.5 sm:gap-5 ">
+					<div className="col-[full-start/full-end] mx-3 sm:mx-0 sm:col-[center-start/center-end] mt-10 sm:mt-20 grid grid-cols-[repeat(auto-fit,minmax(17rem,1fr))] gap-3.5 sm:gap-5 ">
 						<Suspense fallback={<SkeletonLoading />}>
 							<Projects />
 						</Suspense>
