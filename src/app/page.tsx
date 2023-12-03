@@ -8,7 +8,7 @@ export default async function Home() {
 	return (
 		<>
 			<Navigation />
-			<main className="grid grid-cols-defaultLayout h-full grid-rows-[97vh,1fr,min-content] main-page">
+			<main className="grid grid-cols-defaultLayout h-full grid-rows-[92vh,1fr,min-content] sm:grid-rows-[97vh,1fr,min-content] main-page">
 				<Header />
 
 				<section className="grid grid-cols-defaultLayout z-10 bg-theme-snow col-[full-start/full-end] py-20">
