@@ -23,7 +23,9 @@ const Project = async ({ project }: Props) => {
 			className="border rounded-lg p-4 hover:-translate-y-1 hover:transition transition relative">
 			<div className="flex gap-0.5 flex-col">
 				<span className="text-xs sm:text-sm">{project.teamName}</span>
-				<span className="text-base sm:text-lg font-semibold">{project.name}</span>
+				<span className="text-base sm:text-lg font-semibold mr-10">
+					{project.name}
+				</span>
 			</div>
 			<Suspense
 				fallback={
